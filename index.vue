@@ -20,6 +20,7 @@
           const { img } = this.$refs
           const _img = new Image()
           _img.onload = (e) => {
+            // 图片下载完毕之后将原图片对象的运动效果设置如下，然后将透明度在很短的时间内重新设置为1，避免白屏晃动感
             img.style.transition = "opacity,background, .3s ease-out"
             img.style.background = 'rgba(255, 255, 255, .3)'
             img.style.opacity = 0
